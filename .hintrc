@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "button-type": "off",
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id": "off",
+        "duplicate-id-active": "off"
+      }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ],
+    "axe/name-role-value": "off",
+    "detect-css-reflows/composite": "off",
+    "detect-css-reflows/paint": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ]
+  }
+}

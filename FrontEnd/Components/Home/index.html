@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic</title>
+    <link href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css" rel="stylesheet">
+    <link rel="style-sheet" href="../../Styles/App.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .Nav-Bar {
+            z-index: 1;
+        }
+
+        /*  */
+        .nav-padding {
+            padding: 0px;
+        }
+
+        .phone-outline {
+            padding: 5px;
+            border: 1px solid #00BFFF;
+            border-radius: 5px;
+        }
+
+        .btn-hover:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s;
+        }
+
+
+        .custom-bg {
+            background: #9f7aea;
+            background: linear-gradient(175deg, #4416a0 23%, #9f7aea 100%);
+        }
+
+
+        /* animation */
+
+        .custom-bg .circles {
+            position: absolute;
+            width: 90%;
+            z-index: 1;
+        }
+
+        .custom-bg .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: #9f7aea;
+            animation: animate 25s linear infinite;
+            bottom: 0px;
+            opacity: 0;
+            border-radius: 50px;
+        }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+            border-radius: 50px;
+
+        }
+
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+            border-radius: 50px;
+
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+            border-radius: 50px;
+
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+            border-radius: 50px;
+
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+            border-radius: 50px;
+
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 10px;
+            height: 10px;
+            animation-delay: 3s;
+            border-radius: 50px;
+
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 50px;
+            height: 50px;
+            animation-delay: 7s;
+            border-radius: 50px;
+
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+            border-radius: 50px;
+
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+            border-radius: 50px;
+
+        }
+
+        .circles li:nth-child(10) {
+            left: 65%;
+            width: 50px;
+            height: 50px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+
+        .circles li:nth-child(11) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+
+        .circles li:nth-child(13) {
+            left: 25%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+        }
+
+
+
+        @keyframes animate {
+
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+
+            20% {
+                transform: translateY(-200px) rotate(0deg);
+                opacity: 0.2;
+                border-radius: 0;
+            }
+
+            40% {
+                transform: translateY(-500px) rotate(720deg);
+                opacity: 0.5;
+                border-radius: 50%;
+            }
+
+            60% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0.5;
+                border-radius: 50%;
+            }
+
+            75% {
+                transform: translateY(-1500px) rotate(250deg);
+                opacity: 0.7;
+                border-radius: 20%;
+            }
+
+            85% {
+                transform: translateY(-500px) rotate(250deg);
+                opacity: 0.7;
+                border-radius: 20%;
+            }
+
+
+            100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+                border-radius: 0;
+            }
+        }
+
+        /* activtion */
+        .active {
+            color: white;
+            background-color: #9f7aea;
+            /* Same as blue-700 in Tailwind CSS */
+            border-color: #bdbcc0;
+            transition: all 0.5s;
+        }
+
+        .filterDiv {
+            transition: transform 0.5s, opacity 0.5s;
+            /* Adding transition for scaling and opacity */
+            opacity: 1;
+        }
+
+        .filterDivscale {
+            transform: scale(0.8);
+        }
+
+        .show {
+            opacity: 1;
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+    <!-- Section 1: Navbar -->
+    <section class=" NAv-Bar shadow-md nav-padding">
+        <div class="  border-b border-gray-200 container mx-auto py-2 flex justify-between items-center">
+
+            <div class="  border-r  pr-3 border-l pl-3  border-gray-200 flex items-center">
+                <a href="tel:630-458-9845" class="text-purple-500 flex items-center space-x-2 ">
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="text-gray-900  dark:text-white">Call Us 630-458-9845</span>
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-0  border-r pr-3 border-l pl-3 border-gray-200  "> <span  class="text-gray-900  dark:text-white">Mon – Fri:
+                    9:00am – 5:00pm, Sat: 09:00 am – 02:00pm, Sunday: Closed </span> </div>
+
+            <div class=" border-l pl-3 border-gray-200 flex items-center space-x-4">
+                <a href="#" class="text-gray-500"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-500"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-500"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-500"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white shadow-md  py-10 z-60 dark:bg-gray-900">
+        <nav class="bg-white border-gray-200 dark:bg-gray-900 ">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                </a>
+                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <button type="button"
+                        class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                        Booking Now!
+                    </button>
+                    <button data-collapse-toggle="navbar-cta" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-cta" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                    <ul
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:p-0 text-white bg-purple-700 rounded md:bg-transparent md:text-purple-700 md:dark:text-purple-500"
+                                aria-current="page">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About
+                                Us
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Financial
+                            </a>
+                        </li>
+
+                        <!-- services -->
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2  px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-purple-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-bold">Services
+                            <svg class="w-2.5 h-2.5 ml-2.5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownNavbar"
+                            class=" z-60 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                                aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Bridge</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cosmetic</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dental
+                                        Implant</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Denturs</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Endodontics</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Filings</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Root
+                                        Canal</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Teeth</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tooth-Removal</a>
+                                </li>
+                            </ul>
+                            <div class="py-1">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                                    out</a>
+                            </div>
+                        </div>
+
+                        <!-- services -->
+
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Our
+                                Team</a>
+                        </li>
+
+
+
+
+
+                        <!-- Location -->
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-purple-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-bold">Location
+                            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownNavbar"
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                                aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Orland
+                                        Park</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Addison</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Location -->
+
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+
+    <!-- Darkmood -->
+        <div class="fixed ml-5 bg-white dark:bg-blue-900">
+            <button id="theme-toggle" type="button">
+                <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 000 16 8 8 0 000-16zM5.21 6.51a7 7 0 0112.57 4.08A7 7 0 015.21 6.51z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 5a7 7 0 100 10A7 7 0 0010 5z"></path></svg>
+            </button>
+        </div>
+    <!-- /Section 1: Navbar -->
+
+    <!-- Section 2 -->
+    <!-- Section 2: محتوى -->
+    <section class=" my-4  ">
+        <!-- محتوى القسم هنا -->
+        <div id="default-carousel" class="relative w-full " data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-screen overflow-hidden rounded-lg ">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                    <img src="../../Assets/Images/female-dentist-scanning-patient-s-teeth-with-x-ray-machine.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="../../Assets/Images/2147879142.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <h1></h1>
+                    <P></P>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="../../Assets/Images/female-patient-lying-dentist-chair-looking-teeth-x-ray-screen.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <h1></h1>
+                    <P></P>
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="../../Assets/Images/portrait-smiling-female-male-dentist-clinic.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <h1></h1>
+                    <P></P>
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="../../Assets/Images/defocused-dentists-holding-dental-equipment.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <h1></h1>
+                    <P></P>
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                    data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                    data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                    data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                    data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                    data-carousel-slide-to="4"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button"
+                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+
+
+        </div>
+
+    </section>
+    <!-- /Section 2 -->
+
+    <!-- Section 3 -->
+    <!-- Section 3: محتوى -->
+    <section class=" mx-auto p-4 my-4">
+        <!-- محتوى القسم هنا -->
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+            <div class="card bg-purple-500 text-white rounded-lg p-6 flex flex-col items-center h-80">
+                <i class=" fas fa-user-md fa-3x mb-4"></i>
+                <h2 class="text-2xl font-bold mb-2">Our Team</h2>
+                <p class="text-center mb-4">Our team at Toothtown Dental are well trained personnel who are committed to
+                    making your dental appointment as smooth as possible</p>
+                <button class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">View More</button>
+            </div>
+            <div class="card bg-purple-500 text-white rounded-lg p-6 flex flex-col items-center h-80">
+                <i class="fas fa-map-marker-alt fa-3x mb-4"></i>
+                <h2 class="text-2xl font-bold mb-2">Location</h2>
+                <p class="text-center mb-4">We are conveniently located in two places: ORLAND PARK and ADDISON where we
+                    are providing our services. Want more details?</p>
+                <button class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">Get
+                    Direction</button>
+            </div>
+            <div class="card bg-purple-500 text-white rounded-lg p-6 flex flex-col items-center h-80">
+                <i class="fas fa-calendar-check fa-3x mb-4"></i>
+                <h2 class="text-2xl font-bold mb-2">Appointments</h2>
+                <p class="text-center mb-4">For the convenience of our patients, we allow appointments through our
+                    online form. Click here to fill out a form & our team will call you.</p>
+                <button class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">Book Now</button>
+            </div>
+        </div>
+    </section>
+    <!-- /Section 3 -->
+
+    <!-- Section 4 -->
+    <!-- Section 4: محتوى -->
+    <section class=" mx-auto p-4 my-4 overflow-hidden bg-purple-500 h-fill">
+        <!-- محتوى القسم هنا -->
+        <div class="up-container flex flex-col md:flex-row gap-4 p-4  ">
+            <div class=" bg-teal-200 p-10 rounded-lg form-container flex-1  p-4 rounded mt-40">
+                <h1 class="text-2xl font-bold text-gray-900  dark:text-white">Welcome to Us</h1>
+                <h2 class="text-3xl font-bold text-gray-900 mt-4 mb-2">Make an Appointment Today!</h2>
+                <p class="text-gray-700 mt-2"><span class="text-2xl font-bold text-white">Our clinic</span>Our clinic
+                    provides high-level dental services, offers comprehensive solutions for the treatment of any dental
+                    disease.</p>
+            </div>
+            <!-- Form -->
+            <div class=" overflow-hidden flex-1 bg-white p-4 rounded-lg shadow-md mt-20">
+
+                <form class=" overflow-hidden">
+                    <div class="content-container grid gap-6 mb-6 md:grid-cols-2">
+                        <div>
+                            <label for="first_name"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+                            <input type="text" id="first_name"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                placeholder="John" required />
+                        </div>
+                        <div>
+                            <label for="last_name"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last name</label>
+                            <input type="text" id="last_name"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                placeholder="Doe" required />
+                        </div>
+                        <div class="mb-6">
+                            <label for="email"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email
+                                address</label>
+                            <input type="email" id="email"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                placeholder="john.doe@company.com" required />
+                        </div>
+                        <div>
+                            <label for="phone"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone
+                                number</label>
+                            <input type="tel" id="phone"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+                        </div>
+                        <div>
+                            <label for="countries"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an
+                                option</label>
+                            <select id="countries"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500">
+                                <option selected>Staffs</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="countries"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an
+                                option</label>
+                            <select id="countries"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500">
+                                <option selected>Department</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <button type="button" data-modal-target="timepicker-modal" data-modal-toggle="timepicker-modal"
+                        class="content-container text-white bg-purple-500  hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mb-10">
+                        <svg class="w-4 h-4 me-1 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Schedule appointment
+                    </button>
+                    <!-- Main modal -->
+                    <div id="timepicker-modal" tabindex="-1" aria-hidden="true"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative p-4 w-full max-w-[23rem] max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                                        Schedule an appointment
+                                    </h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                        data-modal-toggle="timepicker-modal">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="p-4 pt-0">
+                                    <div inline-datepicker datepicker-autoselect-today
+                                        class="mx-auto sm:mx-0 flex justify-center my-5 [&>div>div]:shadow-none [&>div>div]:bg-gray-50 [&_div>button]:bg-gray-50">
+                                    </div>
+                                    <label class="text-sm font-medium text-gray-900 dark:text-white mb-2 block">
+                                        Pick your time
+                                    </label>
+                                    <ul id="timetable" class="grid w-full grid-cols-3 gap-2 mb-5">
+                                        <li>
+                                            <input type="radio" id="10-am" value="" class="hidden peer"
+                                                name="timetable">
+                                            <label for="10-am"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                10:00 AM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="10-30-am" value="" class="hidden peer"
+                                                name="timetable">
+                                            <label for="10-30-am"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                10:30 AM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="11-am" value="" class="hidden peer"
+                                                name="timetable">
+                                            <label for="11-am"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                11:00 AM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="11-30-am" value="" class="hidden peer"
+                                                name="timetable">
+                                            <label for="11-30-am"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                11:30 AM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="12-am" value="" class="hidden peer" name="timetable"
+                                                checked>
+                                            <label for="12-am"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                12:00 AM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="12-30-pm" value="" class="hidden peer"
+                                                name="timetable">
+                                            <label for="12-30-pm"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                12:30 PM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="1-pm" value="" class="hidden peer" name="timetable">
+                                            <label for="1-pm"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                01:00 PM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="1-30-pm" value="" class="hidden peer"
+                                                name="timetable">
+                                            <label for="1-30-pm"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                01:30 PM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="2-pm" value="" class="hidden peer" name="timetable">
+                                            <label for="2-pm"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                02:00 PM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="2-30-pm" value="" class="hidden peer"
+                                                name="timetable">
+                                            <label for="2-30-pm"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                02:30 PM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="3-pm" value="" class="hidden peer" name="timetable">
+                                            <label for="3-pm"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                03:00 PM
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="3-30-pm" value="" class="hidden peer"
+                                                name="timetable">
+                                            <label for="3-30-pm"
+                                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-purple-500 peer-checked:border-purple-700 dark:hover:border-gray-600 dark:peer-checked:text-purple-500 peer-checked:bg-purple-50 peer-checked:text-purple-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-purple-900">
+                                                03:30 PM
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <button type="button"
+                                            class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800">Save</button>
+                                        <button type="button" data-modal-hide="timepicker-modal"
+                                            class="py-2.5 px-5 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-purple-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Discard</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flex items-start mb-6">
+                        <div class="flex items-center h-5">
+                            <input id="remember" type="checkbox" value=""
+                                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-purple-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-purple-600 dark:ring-offset-gray-800"
+                                required />
+                        </div>
+                        <label for="remember" class="ms-2 ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">I
+                            agree
+                            with the <a href="#" class="text-purple-600 hover:underline dark:text-purple-500">terms and
+                                conditions</a>.</label>
+                    </div>
+                    <button type="submit"
+                        class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!-- /Section 4 -->
+
+    <!-- Section 5 -->
+    <!-- Section 5: محتوى -->
+    <section class="overflow-hidden  mx-auto p-4 ">
+        <!-- محتوى القسم هنا -->
+
+        <div class="container mx-auto   ">
+            <div class="flex flex-wrap justify-around items-center md-flex-row">
+                <div class="content-top service-card ">
+                    <div class="bg-purple-300 w-40 rounded-full p-4 shadow-md  ">
+                        <img src="../../Assets/Images/Berla/2.png" alt="">
+                    </div>
+                    <p class=" text-gray-500">Teeth Whitening</p>
+                </div>
+                <div class=" content-top service-card">
+                    <div class="bg-purple-300 w-40 rounded-full p-4 shadow-md">
+                        <img src="../../Assets/Images/Berla/3.png" alt="">
+                    </div>
+                    <p class=" text-gray-500">Teeth Cleaning</p>
+                </div>
+                <div class="content-top service-card">
+                    <div class="bg-purple-300 w-40 rounded-full p-4 shadow-md">
+                        <img src="../../Assets/Images/Berla/4.png" alt="">
+
+                    </div>
+                    <p class=" text-gray-500">Teeth Filling</p>
+                </div>
+                <div class=" content-top service-card">
+                    <div class="bg-purple-300 w-40 rounded-full p-4 shadow-md">
+                        <img src="../../Assets/Images/Berla/5.png" alt="">
+
+                    </div>
+                    <p class=" text-gray-500">Teeth Extractions</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- /Section 5 -->
+
+    <!-- Section 6 -->
+    <!-- Section 6: محتوى -->
+    <section class="overflow-hidden mx-auto p-4">
+        <!-- محتوى القسم هنا -->
+        <div class="up-container flex flex-col-reverse md:flex-row gap-4 p-4">
+            <div class="mb-5 md:w-1/2">
+                <h2 class="font-bold text-purple-400 text-2xl py-5">About Us</h2>
+                <h1 class="text-gray-900  dark:text-white text-4xl py-4">Catering to all of your <br> dental needs and desires</h1>
+                <h3 class="text-gray-400 w-full text-xl py-4">
+                    <span class="text-purple-600 text-2xl">Toothtown Dental </span>was established in June of 2022. <br>
+                    We are here to take care of our <span class="text-purple-600 text-2xl">patients</span> <br> and
+                    spread our knowledge about dental care.
+                </h3>
+                <h3 class="text-gray-400 w-full text-xl py-3">
+                    We practice a full scope of general dentistry and<br> <span
+                        class="text-purple-600 text-2xl">cosmetic
+                        dentistry</span> with expertise ranging from extractions, crowns, and <span
+                        class="text-purple-600 text-2xl">bridges</span>bridges.<br> Make an appointment today and meet
+                    our friendly staff.
+                </h3>
+                <button type="submit"
+                    class="py-3 text-white bg-purple-700 hover:bg-purple-500 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Learn
+                    more </button>
+            </div>
+            <div class="content-top w-100 md:w-1/2 flex items-center justify-center">
+                <img src="../../Assets/Images/defocused-dentists-holding-dental-equipment.jpg" alt=""
+                    class="w-full h-auto rounded-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- /Section 6 -->
+
+    <!-- Section 7 -->
+    <!-- Section 7: محتوى -->
+    <section class="custom-bg overflow-hidden h-60 mx-auto p-4 ">
+
+        <div class="sections mx-auto">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class=" flex flex-col-reverse  md:flex-row gap-4 justify-around items-center text-white text-center ">
+                <div class="content-top mt-20 z-20">
+                    <h2 class=" text-4xl font-bold">59</h2>
+                    <p class="mt-2">Great Dentists</p>
+                </div>
+                <div class="content-top mt-20 z-20">
+                    <h2 class=" text-4xl font-bold">26</h2>
+                    <p class="mt-2">Dental Specialties</p>
+                </div>
+                <div class="content-top mt-20 z-20">
+                    <h2 class=" text-4xl font-bold">18</h2>
+                    <p class="mt-2">Dental Services</p>
+                </div>
+                <div class="content-top mt-20 z-20">
+                    <h2 class=" text-4xl font-bold">12</h2>
+                    <p class="mt-2">National Awards</p>
+                </div>
+                <div class="content-top mt-20 z-20">
+                    <h2 class=" text-4xl font-bold">14</h2>
+                    <p class="mt-2">Years of Experience</p>
+                </div>
+            </div>
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+    <!-- /Section 7 -->
+
+    <!-- Section 8 -->
+    <!-- Section 8: محتوى -->
+    <section class=" bg-gray-200  mx-auto py-12 my-4">
+        <!-- محتوى القسم هنا -->
+
+        <div id="controls-carousel" class="relative w-full " data-carousel="static">
+
+            <!-- Carousel wrapper -->
+            <div class="relative h-screen overflow-hidden rounded-lg md:h-96">
+                <h1 class=" mb-40 text-4xl text-bold text-gray-900  dark:text-white flex justify-center gap-10"> Testimonials </h1>
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out  flex items-center justify-center text-center w-fill"
+                    data-carousel-item>
+                    <p class="text-white-400  text-2xl mt-20">
+                        I have been coming to this dentist, <br> dr. Yusuf fahmy, for years at his different
+                        locations.<br> My
+                        previous dentist wasn’t bad but Dr Fahmy is so good at what he does.<br> He makes sure he takes
+                        care of his patients and anything I get done doesn’t hurt. <br> He takes time to explain
+                        everything to me and <br> I can tell he cares more about my comfort than trying to make money
+                        out of
+                        me. <br> Really happy to be one of his patients.
+                    </p>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out  flex items-center justify-center text-center w-fill "
+                    data-carousel-item="active">
+                    <P class="text-white-400 text-2xl mt-20">
+                        I always have a great experience when going to see Dr.Fahmy. <br> He really takes the time to
+                        listen to
+                        any concerns <br> I have and cares to properly complete any necessary dental work <br> while
+                        ensuring patient
+                        comfort. His staff is great and easy to work with and <br> I really love the updates he and his
+                        team made
+                        to the office! I would really recommend this practice <br> if you’re looking for a new dentist
+                        who
+                        actually cares about his patients’ dental health.
+                    </P>
+
+                </div>
+
+            </div>
+            <!-- Slider controls -->
+
+            <button type="button"
+                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-6 mb-10 cursor-pointer group focus:outline-none"
+                data-carousel-next>
+                <span
+                    class="inline-flex bg-purple-400 items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-gray/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-purple dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+                </span>
+            </button>
+        </div>
+
+    </section>
+    <!-- /Section 8 -->
+
+    <!-- Section 9 -->
+    <!-- Section 9: محتوى -->
+    <section class=" mx-auto my-4">
+        <!-- محتوى القسم هنا -->
+        <h1 class=" mb-5 text-4xl text-bold  text-gray-900  dark:text-white flex justify-center gap-10">Gallery</h1>
+
+        <div class="flex items-center justify-center py-6 md:py-8 flex-wrap">
+            <button type="button" onclick="filterSelection('all', this)"
+                class=" filter-btn text-gray-900  hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700  focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-6 mb-6 dark:text-white dark:focus:ring-gray-800 active">All
+                categories</button>
+            <button type="button" onclick="filterSelection('shoes', this)"
+                class="filter-btn text-gray-900  hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700  focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-6 mb-6 dark:text-white dark:focus:ring-gray-800">Shoes</button>
+            <button type="button" onclick="filterSelection('bags', this)"
+                class="filter-btn text-gray-900   hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-6 mb-6 dark:text-white dark:focus:ring-gray-800">Bags</button>
+            <button type="button" onclick="filterSelection('electronics', this)"
+                class="filter-btn text-gray-900   hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700  focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-6 mb-6 dark:text-white dark:focus:ring-gray-800">Electronics</button>
+            <button type="button" onclick="filterSelection('gaming', this)"
+                class="filter-btn text-gray-900  hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700  focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-6 mb-6 dark:text-white dark:focus:ring-gray-800">Gaming</button>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4  ">
+            <div class="filterDiv filterDivscale shoes">
+                <img class="h-auto w-80 rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+            </div>
+            <div class="filterDiv filterDivscale bags">
+                <img class="h-auto w-80 rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+            </div>
+            <div class="filterDiv filterDivscale electronics">
+                <img class="h-auto w-80 rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+            </div>
+            <div class="filterDiv filterDivscale gaming">
+                <img class="h-auto w-80 rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+            </div>
+            <!-- باقي الصور مع إضافة الفئات المناسبة -->
+        </div>
+
+            <div class="flex items-center justify-center py-6 md:py-8 flex-wrap">
+                <button type="button"
+                    class=" transtion duration-500 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                    <a href="../Gallrey/Gallery.html">More</a>
+                </button>
+        </div>
+      
+
+
+    </section>
+    <!-- /Section 9 -->
+
+    <!-- Section 10 -->
+    <!-- Section 10: محتوى -->
+    <section class="abslout mx-auto p-4 my-4">
+        <!-- محتوى القسم هنا -->
+
+    </section>
+    <!-- /Section 10 -->
+
+    <!-- Section 11 -->
+    <!-- Section 11: محتوى -->
+    <section class=" mx-auto  my-4">
+        <!-- محتوى القسم هنا -->
+         <div class="bg-gray-300 py-12 text-center ">
+            <h1 class="text-3xl text-gray-900  dark:text-white">
+                Make your dream smile a reality! Call us at 630-458-9845 or
+                <a class="text-purple-500" href="">make an appointment</a>
+            </h1>
+         </div>
+<footer class="bg-purple-500 dark:bg-gray-900">
+    <div class="mx-auto w-full max-w-screen-xl">
+      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class=" hover:underline text-white">About</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Careers</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Brand Center</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Discord Server</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Twitter</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Facebook</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Privacy Policy</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Licensing</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Terms &amp; Conditions</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">iOS</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Android</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">Windows</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline text-white">MacOS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    </div>
+</footer>
+
+
+<footer class="bg-white dark:bg-gray-900">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+              <a href="https://flowbite.com/" class="flex items-center">
+                  <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+              </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                      </li>
+                      <li>
+                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                      </li>
+                      <li>
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="#" class="hover:underline">Privacy Policy</a>
+                      </li>
+                      <li>
+                          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+          </span>
+          <div class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
+            
+            <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                            <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                      <span class="sr-only">Facebook page</span>
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                            <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                        </svg>
+                      <span class="sr-only">Discord community</span>
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                        <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                    </svg>
+                      <span class="sr-only">Twitter page</span>
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                      </svg>
+                      <span class="sr-only">GitHub account</span>
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                    </svg>
+                      <span class="sr-only">Dribbble account</span>
+                  </a>
+            </div>
+          </div>
+      </div>
+    </div>
+</footer>
+
+    </section>
+    <!-- /Section 11 -->
+
+    <!-- Section 12 Footer -->
+    <!-- Section 12: محتوى -->
+    <section class="container mx-auto p-4 my-4">
+        <!-- محتوى القسم هنا -->
+    </section>
+    <!-- /Section 12 Footer -->
+
+    <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".card", {
+            scrollTrigger: {
+                trigger: ".grid",
+                start: "top center",
+                end: "bottom center",
+                toggleActions: "restart none none  none",
+            },
+            x: -200,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.3
+        });
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // أنيميشن للفورم يأتي من اليسار
+        gsap.from(".form-container", {
+            scrollTrigger: {
+                trigger: ".form-container",
+                start: "top center",
+                end: "bottom center",
+                toggleActions: "restart none none none",
+            },
+            x: -200,
+            opacity: 0,
+            duration: 1
+        });
+
+        // أنيميشن للـ div الآخر يأتي من اليمين
+        gsap.from(".content-container", {
+            scrollTrigger: {
+                trigger: ".content-container",
+                start: "top center",
+                end: "bottom center",
+                toggleActions: "restart none none none",
+            },
+            y: 200,
+            opacity: 0,
+            duration: 1
+        });
+
+        // أنيميشن للـ div الآخر يأتي من تحت
+        gsap.from(".content-top", {
+            scrollTrigger: {
+                trigger: ".content-container",
+                start: "top center",
+                end: "bottom center",
+                toggleActions: "none restart none none",
+            },
+            y: 200,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.3
+        });
+
+    </script>
+    <script src="../../Actions/App.js"></script>
+
+</body>
+
+</html>
