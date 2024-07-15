@@ -8,247 +8,13 @@
     <link href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css" rel="stylesheet">
-    <link rel="style-sheet" href="../../Styles/App.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .Nav-Bar {
-            z-index: 1;
-        }
-
-        /*  */
-        .nav-padding {
-            padding: 0px;
-        }
-
-        .phone-outline {
-            padding: 5px;
-            border: 1px solid #00BFFF;
-            border-radius: 5px;
-        }
-
-        .btn-hover:hover {
-            transform: scale(1.1);
-            transition: transform 0.2s;
-        }
-
-
-        .custom-bg {
-            background: #9f7aea;
-            background: linear-gradient(175deg, #4416a0 23%, #9f7aea 100%);
-        }
-
-
-        /* animation */
-
-        .custom-bg .circles {
-            position: absolute;
-            width: 90%;
-            z-index: 1;
-        }
-
-        .custom-bg .circles li {
-            position: absolute;
-            display: block;
-            list-style: none;
-            width: 20px;
-            height: 20px;
-            background: #9f7aea;
-            animation: animate 25s linear infinite;
-            bottom: 0px;
-            opacity: 0;
-            border-radius: 50px;
-        }
-
-        .circles li:nth-child(1) {
-            left: 25%;
-            width: 40px;
-            height: 40px;
-            animation-delay: 0s;
-            border-radius: 50px;
-
-        }
-
-
-        .circles li:nth-child(2) {
-            left: 10%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 2s;
-            animation-duration: 12s;
-            border-radius: 50px;
-
-        }
-
-        .circles li:nth-child(3) {
-            left: 70%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 4s;
-            border-radius: 50px;
-
-        }
-
-        .circles li:nth-child(4) {
-            left: 40%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 0s;
-            animation-duration: 18s;
-            border-radius: 50px;
-
-        }
-
-        .circles li:nth-child(5) {
-            left: 65%;
-            width: 40px;
-            height: 40px;
-            animation-delay: 0s;
-            border-radius: 50px;
-
-        }
-
-        .circles li:nth-child(6) {
-            left: 75%;
-            width: 10px;
-            height: 10px;
-            animation-delay: 3s;
-            border-radius: 50px;
-
-        }
-
-        .circles li:nth-child(7) {
-            left: 35%;
-            width: 50px;
-            height: 50px;
-            animation-delay: 7s;
-            border-radius: 50px;
-
-        }
-
-        .circles li:nth-child(8) {
-            left: 50%;
-            width: 25px;
-            height: 25px;
-            animation-delay: 15s;
-            animation-duration: 45s;
-            border-radius: 50px;
-
-        }
-
-        .circles li:nth-child(9) {
-            left: 20%;
-            width: 30px;
-            height: 30px;
-            animation-delay: 2s;
-            animation-duration: 35s;
-            border-radius: 50px;
-
-        }
-
-        .circles li:nth-child(10) {
-            left: 65%;
-            width: 50px;
-            height: 50px;
-            animation-delay: 0s;
-            animation-duration: 11s;
-        }
-
-        .circles li:nth-child(11) {
-            left: 25%;
-            width: 80px;
-            height: 80px;
-            animation-delay: 0s;
-        }
-
-
-        .circles li:nth-child(13) {
-            left: 25%;
-            width: 40px;
-            height: 40px;
-            animation-delay: 0s;
-        }
-
-
-
-        @keyframes animate {
-
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
-                border-radius: 0;
-            }
-
-            20% {
-                transform: translateY(-200px) rotate(0deg);
-                opacity: 0.2;
-                border-radius: 0;
-            }
-
-            40% {
-                transform: translateY(-500px) rotate(720deg);
-                opacity: 0.5;
-                border-radius: 50%;
-            }
-
-            60% {
-                transform: translateY(-1000px) rotate(720deg);
-                opacity: 0.5;
-                border-radius: 50%;
-            }
-
-            75% {
-                transform: translateY(-1500px) rotate(250deg);
-                opacity: 0.7;
-                border-radius: 20%;
-            }
-
-            85% {
-                transform: translateY(-500px) rotate(250deg);
-                opacity: 0.7;
-                border-radius: 20%;
-            }
-
-
-            100% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0;
-                border-radius: 0;
-            }
-        }
-
-        /* activtion */
-        .active {
-            color: white;
-            background-color: #9f7aea;
-            /* Same as blue-700 in Tailwind CSS */
-            border-color: #bdbcc0;
-            transition: all 0.5s;
-        }
-
-        .filterDiv {
-            transition: transform 0.5s, opacity 0.5s;
-            /* Adding transition for scaling and opacity */
-            opacity: 1;
-        }
-
-        .filterDivscale {
-            transform: scale(0.8);
-        }
-
-        .show {
-            opacity: 1;
-            transform: scale(0.9);
-        }
-    </style>
+    <link href="path/to/flowbite.css" rel="stylesheet">
+    <link href="../../Styles/App.css" rel="stylesheet">
 </head>
 
 <body class="bg-white dark:bg-gray-900">
     <!-- Section 1: Navbar -->
-    <section class=" NAv-Bar shadow-md nav-padding">
+    <section class=" shadow-md nav-padding">
         <div class="  border-b border-gray-200 container mx-auto py-2 flex justify-between items-center">
 
             <div class="  border-r  pr-3 border-l pl-3  border-gray-200 flex items-center">
@@ -258,7 +24,8 @@
                 </a>
             </div>
 
-            <div class="flex items-center space-x-0  border-r pr-3 border-l pl-3 border-gray-200  "> <span  class="text-gray-900  dark:text-white">Mon – Fri:
+            <div class="flex items-center space-x-0  border-r pr-3 border-l pl-3 border-gray-200  "> <span
+                    class="text-gray-900  dark:text-white">Mon – Fri:
                     9:00am – 5:00pm, Sat: 09:00 am – 02:00pm, Sunday: Closed </span> </div>
 
             <div class=" border-l pl-3 border-gray-200 flex items-center space-x-4">
@@ -270,7 +37,7 @@
         </div>
     </section>
 
-    <section class="bg-white shadow-md  py-10 z-60 dark:bg-gray-900">
+    <section class="element-above-carousel bg-white shadow-md  py-10 z-60 dark:bg-gray-900">
         <nav class="bg-white border-gray-200 dark:bg-gray-900 ">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -295,10 +62,10 @@
                 </div>
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
                     <ul
-                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                         <li>
                             <a href="#"
-                                class="block py-2 px-3 md:p-0 text-white bg-purple-700 rounded md:bg-transparent md:text-purple-700 md:dark:text-purple-500"
+                                class="block py-2 px-3 md:p-0 text-purple-500 bg-purple-700 rounded md:bg-transparent md:text-purple-700 md:dark:text-purple-500"
                                 aria-current="page">Home</a>
                         </li>
 
@@ -391,10 +158,10 @@
 
 
 
-
                         <!-- Location -->
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-purple-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-bold">Location
+                        <button id="dropdownLocationLink" data-dropdown-toggle="dropdownLocationMenu"
+                            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-purple-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-bold">
+                            Location
                             <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -402,7 +169,7 @@
                             </svg>
                         </button>
                         <!-- Dropdown menu -->
-                        <div id="dropdownNavbar"
+                        <div id="dropdownLocationMenu"
                             class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
                                 aria-labelledby="dropdownLargeButton">
@@ -436,12 +203,41 @@
     </section>
 
     <!-- Darkmood -->
-        <div class="fixed ml-5 bg-white dark:bg-blue-900">
-            <button id="theme-toggle" type="button">
-                <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 000 16 8 8 0 000-16zM5.21 6.51a7 7 0 0112.57 4.08A7 7 0 015.21 6.51z"></path></svg>
-                <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 5a7 7 0 100 10A7 7 0 0010 5z"></path></svg>
-            </button>
-        </div>
+    <div class="ml-5">
+        <label class="theme-switch element-above-dark fixed ">
+            <input type="checkbox" id="theme-toggle" class="theme-switch__checkbox">
+            <div class="theme-switch__container">
+                <div class="theme-switch__clouds"></div>
+                <div class="theme-switch__stars-container">
+                    <svg id="theme-toggle-dark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55"
+                        fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55"
+                        fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
+                            fill="currentColor"></path>
+                    </svg>
+
+                </div>
+                <div class="theme-switch__circle-container">
+                    <div class="theme-switch__sun-moon-container">
+                        <div class="theme-switch__moon">
+                            <div class="theme-switch__spot"></div>
+                            <div class="theme-switch__spot"></div>
+                            <div class="theme-switch__spot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </label>
+
+
+    </div>
+
     <!-- /Section 1: Navbar -->
 
     <!-- Section 2 -->
@@ -842,7 +638,8 @@
         <div class="up-container flex flex-col-reverse md:flex-row gap-4 p-4">
             <div class="mb-5 md:w-1/2">
                 <h2 class="font-bold text-purple-400 text-2xl py-5">About Us</h2>
-                <h1 class="text-gray-900  dark:text-white text-4xl py-4">Catering to all of your <br> dental needs and desires</h1>
+                <h1 class="text-gray-900  dark:text-white text-4xl py-4">Catering to all of your <br> dental needs and
+                    desires</h1>
                 <h3 class="text-gray-400 w-full text-xl py-4">
                     <span class="text-purple-600 text-2xl">Toothtown Dental </span>was established in June of 2022. <br>
                     We are here to take care of our <span class="text-purple-600 text-2xl">patients</span> <br> and
@@ -936,7 +733,8 @@
 
             <!-- Carousel wrapper -->
             <div class="relative h-screen overflow-hidden rounded-lg md:h-96">
-                <h1 class=" mb-40 text-4xl text-bold text-gray-900  dark:text-white flex justify-center gap-10"> Testimonials </h1>
+                <h1 class=" mb-40 text-4xl text-bold text-gray-900  dark:text-white flex justify-center gap-10">
+                    Testimonials </h1>
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out  flex items-center justify-center text-center w-fill"
                     data-carousel-item>
@@ -1029,13 +827,13 @@
             <!-- باقي الصور مع إضافة الفئات المناسبة -->
         </div>
 
-            <div class="flex items-center justify-center py-6 md:py-8 flex-wrap">
-                <button type="button"
-                    class=" transtion duration-500 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
-                    <a href="../Gallrey/Gallery.html">More</a>
-                </button>
+        <div class="flex items-center justify-center py-6 md:py-8 flex-wrap">
+            <button type="button"
+                class=" transtion duration-500 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                <a href="../Gallrey/Gallery.html">More</a>
+            </button>
         </div>
-      
+
 
 
     </section>
@@ -1053,173 +851,191 @@
     <!-- Section 11: محتوى -->
     <section class=" mx-auto  my-4">
         <!-- محتوى القسم هنا -->
-         <div class="bg-gray-300 py-12 text-center ">
+        <div class="bg-gray-300 py-12 text-center ">
             <h1 class="text-3xl text-gray-900  dark:text-white">
                 Make your dream smile a reality! Call us at 630-458-9845 or
                 <a class="text-purple-500" href="">make an appointment</a>
             </h1>
-         </div>
-<footer class="bg-purple-500 dark:bg-gray-900">
-    <div class="mx-auto w-full max-w-screen-xl">
-      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-        <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                    <a href="#" class=" hover:underline text-white">About</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Careers</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Brand Center</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Blog</a>
-                </li>
-            </ul>
         </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Discord Server</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Twitter</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Facebook</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Privacy Policy</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Licensing</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Terms &amp; Conditions</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">iOS</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Android</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">Windows</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline text-white">MacOS</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
-    </div>
-</footer>
+        <footer class="bg-purple-500 dark:bg-gray-900">
+            <div class="mx-auto w-full max-w-screen-xl">
+                <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class=" hover:underline text-white">About</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Careers</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Brand Center</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Discord Server</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Twitter</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Facebook</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Privacy Policy</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Licensing</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Terms &amp; Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">iOS</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Android</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">Windows</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline text-white">MacOS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-
-<footer class="bg-white dark:bg-gray-900">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-              <a href="https://flowbite.com/" class="flex items-center">
-                  <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-              </a>
-          </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
-                      </li>
-                      <li>
-                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
-                      </li>
-                  </ul>
-              </div>
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
-                      </li>
-                      <li>
-                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
-                      </li>
-                  </ul>
-              </div>
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="#" class="hover:underline">Privacy Policy</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
-          </span>
-          <div class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
-            
-            <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
-                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                            <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
-                        </svg>
-                      <span class="sr-only">Facebook page</span>
-                  </a>
-                  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                            <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                        </svg>
-                      <span class="sr-only">Discord community</span>
-                  </a>
-                  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
-                        <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
-                    </svg>
-                      <span class="sr-only">Twitter page</span>
-                  </a>
-                  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                      </svg>
-                      <span class="sr-only">GitHub account</span>
-                  </a>
-                  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
-                    </svg>
-                      <span class="sr-only">Dribbble account</span>
-                  </a>
             </div>
-          </div>
-      </div>
-    </div>
-</footer>
+        </footer>
+
+
+        <footer class="bg-white dark:bg-gray-900">
+            <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+                <div class="md:flex md:justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <a href="https://flowbite.com/" class="flex items-center">
+                            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
+                            <span
+                                class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources
+                            </h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                                </li>
+                                <li>
+                                    <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us
+                            </h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="#" class="hover:underline">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+                            href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+                    </span>
+                    <div class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
+
+                        <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+                            <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 8 19">
+                                    <path fill-rule="evenodd"
+                                        d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Facebook page</span>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 21 16">
+                                    <path
+                                        d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                                </svg>
+                                <span class="sr-only">Discord community</span>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 20 17">
+                                    <path fill-rule="evenodd"
+                                        d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Twitter page</span>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">GitHub account</span>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Dribbble account</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </section>
     <!-- /Section 11 -->
@@ -1243,15 +1059,13 @@
                 trigger: ".grid",
                 start: "top center",
                 end: "bottom center",
-                toggleActions: "restart none none  none",
+                toggleActions: "restart none none none",
             },
             x: -200,
             opacity: 0,
             duration: 1,
             stagger: 0.3
         });
-
-        gsap.registerPlugin(ScrollTrigger);
 
         // أنيميشن للفورم يأتي من اليسار
         gsap.from(".form-container", {
@@ -1274,7 +1088,7 @@
                 end: "bottom center",
                 toggleActions: "restart none none none",
             },
-            y: 200,
+            x: 200, // تعديل الحركة لتكون من اليمين
             opacity: 0,
             duration: 1
         });
@@ -1282,20 +1096,19 @@
         // أنيميشن للـ div الآخر يأتي من تحت
         gsap.from(".content-top", {
             scrollTrigger: {
-                trigger: ".content-container",
+                trigger: ".content-top", // تأكد من أن التريجر هو نفس العنصر
                 start: "top center",
                 end: "bottom center",
-                toggleActions: "none restart none none",
+                toggleActions: "restart none none none",
             },
             y: 200,
             opacity: 0,
             duration: 1,
             stagger: 0.3
         });
-
     </script>
     <script src="../../Actions/App.js"></script>
 
 </body>
 
-</html>
+</html>]
